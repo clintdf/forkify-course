@@ -9,10 +9,6 @@ import addRecipeView from './views/addRecipeView.js';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
-// if (module.hot) {
-//     module.hot.accept();
-// }
-
 const controlRecipes = async function () {
     try {
         const id = window.location.hash.slice([1]);
@@ -29,10 +25,6 @@ const controlRecipes = async function () {
     } catch (err) {
         recipeView.renderError();
     }
-};
-
-const newFeature = function() {
-    console.log('Welcome to the app')
 };
 
 const controlSearchResults = async function () {
@@ -64,7 +56,6 @@ const controlServings = function (newServings) {
     // Update recipe servings (in state)
     model.updateServings(newServings);
     // Update the recipe view
-    // recipeView.render(model.state.recipe);
     recipeView.update(model.state.recipe);
 };
 
@@ -115,6 +106,5 @@ const init = function () {
     searchView.addHandlerSearch(controlSearchResults);
     paginatonView.addHandlerClick(controlPagination);
     addRecipeView.addHandlerUpload(controlAddRecipe);
-    newFeature();
 };
 init();
