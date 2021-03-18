@@ -1,0 +1,41 @@
+{
+    "name": "forkify",
+    "version": "1.0.0",
+    "description": "",
+    "default": "index.html",
+    "scripts": {
+        "start": "parcel index.html",
+        "build": "parcel build index.html --out-dir ./dist"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ],
+        "plugins": [
+            "@babel/plugin-syntax-class-properties",
+            "@babel/plugin-transform-runtime"
+        ]
+    },
+    "author": "Clint Felker",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.13.10",
+        "@babel/eslint-parser": "^7.13.10",
+        "@babel/plugin-proposal-private-methods": "^7.13.0",
+        "@babel/plugin-syntax-class-properties": "^7.12.13",
+        "@babel/plugin-transform-runtime": "^7.13.10",
+        "@babel/preset-env": "^7.13.10",
+        "@parcel/transformer-sass": "^2.0.0-nightly.621",
+        "parcel": "^2.0.0-beta.1",
+        "parcel-bundler": "^1.12.5"
+    },
+    "dependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.13.0",
+        "@babel/polyfill": "^7.12.1",
+        "@babel/runtime": "^7.13.10",
+        "config": "^3.3.6",
+        "core-js": "^3.9.1",
+        "fractional": "^1.0.0",
+        "img": "^3.0.3"
+    }
+}
