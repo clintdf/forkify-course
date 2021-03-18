@@ -31,6 +31,10 @@ const controlRecipes = async function () {
     }
 };
 
+const newFeature = function() {
+    console.log('Welcome to the app')
+};
+
 const controlSearchResults = async function () {
     try {
         resultsView.renderSpinner();
@@ -111,5 +115,6 @@ const init = function () {
     searchView.addHandlerSearch(controlSearchResults);
     paginatonView.addHandlerClick(controlPagination);
     addRecipeView.addHandlerUpload(controlAddRecipe);
+    newFeature();
 };
 init();
